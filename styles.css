@@ -1,0 +1,183 @@
+body{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #dbe2ef;
+    color: #112d4e; 
+   
+}
+#top-section{
+    margin-bottom: 5%;
+    margin-top: 2%;
+}
+input{
+    width: 20%;
+    border-radius: 5px;
+    border: solid 1px #112d4e;
+    height: 2rem;
+}
+.button{
+    border:solid #112d4e 1px;
+    outline: none;
+    background-color: #dbe2ef;
+
+}
+.button:hover{
+    background-color: #f9f7f7;
+}
+#goButton{
+    border-radius:0px;
+    height: 2rem;
+    padding: 0 1.5rem;
+}
+#dropButton{
+    border-radius:10px;
+}
+
+.unitDropdown{
+    
+    position: absolute;
+    right:2%;
+    top:2%;
+}
+#unitList{
+    position: relative;
+    top:0px;
+}
+.unitOption{
+    border: solid grey 1px;
+    margin: 5px;
+}
+
+.unitOption:hover{
+    background-color: #f9f7f7;
+}
+
+
+#grid-container{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "cwb hfc";  
+}
+
+#current-weather-box{
+grid-area:cwb;
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+grid-template-areas:
+"info info"
+"temp mainicon"
+"temp desc"
+}
+
+
+#tempUnits{
+    font-size: 1rem;
+    margin-top: 0px;
+}
+
+#mainInfo{
+    grid-area: info;
+}
+#mainTemp{
+    font-size: 2.5rem;
+    margin-bottom:0px;
+    grid-area: temp;
+}
+#tempIcon{
+    grid-area: mainicon;
+    align-self: end;
+    
+}
+#mainDescription{
+    grid-area: desc;
+    align-self: start;
+}
+
+
+
+#week-forecast-box{
+margin-top:60px;
+display: grid; 
+column-gap: 15px;
+
+grid-template-columns: repeat(7,1fr);
+
+grid-template-rows: 20px 1fr 20px;
+grid-template-areas: 
+"day1 day2 day3 day4 day5 day6 day7"
+"icn1 icn2 icn3 icn4 icn5 icn6 icn7"
+"value1 value2 value3 value4 value5 value6 value7" 
+}
+
+#weekFCDay1{grid-area: day1} 
+#weekFCIcon1{grid-area: icn1} 
+#weekFCValue1{grid-area: value1}
+#weekFCDay2{grid-area: day2} 
+#weekFCIcon2{grid-area: icn2} 
+#weekFCValue2{grid-area: value2}
+#weekFCDay3{grid-area: day3} 
+#weekFCIcon3{grid-area: icn3} 
+#weekFCValue3{grid-area: value3}
+#weekFCDay4{grid-area: day4} 
+#weekFCIcon4{grid-area: icn4} 
+#weekFCValue4{grid-area: value4}
+#weekFCDay5{grid-area: day5} 
+#weekFCIcon5{grid-area: icn5} 
+#weekFCValue5{grid-area: value5}
+#weekFCDay6{grid-area: day6} 
+#weekFCIcon6{grid-area: icn6} 
+#weekFCValue6{grid-area: value6}
+#weekFCDay7{grid-area: day7} 
+#weekFCIcon7{grid-area: icn7} 
+#weekFCValue7{grid-area: value7}
+
+
+#hour-forecast-box{
+    grid-area: hfc;
+    display: grid;
+    grid-template-columns: 5rem 5rem 2rem 5rem 5rem;
+    grid-template-rows: repeat(12, 30px);
+    justify-self:center;
+    }
+
+
+
+.hourFCValue, .hourFCTime{
+    border-top: solid black 1px;  
+}
+
+
+
+@media(max-width: 800px){
+    #week-forecast-box{
+        margin-top:10px;
+       grid-template-columns: repeat(8, 1fr);
+        grid-template-rows:20px 1fr 20px 20px 20px 1fr 20px;
+        justify-content: center;
+        grid-template-areas:
+        "day1 day1 day2 day2 day3 day3 day4 day4"
+        "icn1 icn1 icn2 icn2 icn3 icn3 icn4 icn4"
+        "value1 value1 value2 value2 value3 value3 value4 value4"
+        ". . . . . . . ." 
+        ". day5 day5 day6 day6 day7 day7 ."
+        ". icn5 icn5 icn6 icn6 icn7 icn7 ."
+        ". value5 value5 value6 value6 value7 value7 .";
+        
+    
+}
+    #grid-container{
+        grid-template-columns:1fr;
+        grid-template-rows:1fr 1fr;
+        grid-template-areas:
+        "cwb"
+        "hfc";
+        justify-content: center;
+    }
+    .unitDropdown{
+       right: 10px;
+       top: 10px;
+    }
+    
+}

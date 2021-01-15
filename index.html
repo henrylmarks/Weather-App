@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = top-section>
+    <input id = "cityName" type ="text" name = "cityName" placeholder="Search for a city">
+    <button type = "submit" id = "goButton" class = "button"> Search</button>
+    <h3 id = "errorMessage">Error - please ensure you have the correct spelling</h3>
+    <div class = "unitDropdown">
+        <button id = "dropButton" class = "button">Change temperature units</button>
+        <div id = "unitList" class = "myDropDown">
+            <p id = "metric" class = "unitOption">Celcius</p>
+            <p id = "imperial" class = "unitOption">Farenheit</p>
+            <p id = "default" class = "unitOption">Kelvin</p>
+        </div>       
+    </div>
+</div>
+
+<div id = "grid-container">
+    <div id = "current-weather-box">
+    <div id = "mainInfo"><h1> <span id = "displayCity">City</span></h1>
+    <h3 id = "time">time</h3>
+    </div>
+    <div id = "mainTemp"><h3><span id = "tempValue" class = "tempNumber">10</span> ° <span id = "tempUnits">celcius </span></h3>
+    </div>
+     <div id = "tempIcon"></div>
+     <div id = "mainDescription"><h3><span id = "weatherDescription">Description</span></h3> </div>   
+    </div>
+    <div id = "hour-forecast-box">
+    
+            <div id = "hourFCTime1" class = "hourFCTime">00:00</div>
+            <div id = "hourFCvalue1" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime13" class = "hourFCTime">12:00</div>
+            <div id = "hourFCvalue13" class = "hourFCValue tempNumber">10*c</div>
+            
+
+            <div id = "hourFCTime2" class = "hourFCTime">01:00</div>
+            <div id = "hourFCvalue2" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime14" class = "hourFCTime">13:00</div>
+            <div id = "hourFCvalue14" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime3" class = "hourFCTime">02:00</div>
+            <div id = "hourFCvalue3" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime15" class = "hourFCTime">14:00</div>
+            <div id = "hourFCvalue15" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime4" class = "hourFCTime">03:00</div>
+            <div id = "hourFCvalue4" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime16" class = "hourFCTime">15:00</div>
+            <div id = "hourFCvalue16" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime5" class = "hourFCTime">04:00</div>
+            <div id = "hourFCvalue5" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime17" class = "hourFCTime">16:00</div>
+            <div id = "hourFCvalue17" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime6" class = "hourFCTime">05:00</div>
+            <div id = "hourFCvalue6" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime18" class = "hourFCTime">17:00</div>
+            <div id = "hourFCvalue18" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime7" class = "hourFCTime">06:00</div>
+            <div id = "hourFCvalue7" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime19" class = "hourFCTime">18:00</div>
+            <div id = "hourFCvalue19" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime8" class = "hourFCTime">07:00</div>
+            <div id = "hourFCvalue8" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime20" class = "hourFCTime">19:00</div>
+            <div id = "hourFCvalue20" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime9" class = "hourFCTime">08:00 </div>
+            <div id = "hourFCvalue9" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime21" class = "hourFCTime">20:00</div>
+            <div id = "hourFCvalue21" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime10" class = "hourFCTime">09:00</div>
+            <div id = "hourFCvalue10" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime22" class = "hourFCTime">21:00</div>
+            <div id = "hourFCvalue22" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime11" class = "hourFCTime">10:00</div>
+            <div id = "hourFCvalue11" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+
+            <div id = "hourFCTime23" class = "hourFCTime">22:00</div>
+            <div id = "hourFCvalue23" class = "hourFCValue tempNumber">10*c</div>
+
+            <div id = "hourFCTime12" class = "hourFCTime">11:00</div>
+            <div id = "hourFCvalue12" class = "hourFCValue tempNumber">10*c</div>
+            <div class=filler></div>
+            
+            <div id = "hourFCTime24" class = "hourFCTime">23:00</div>
+            <div id = "hourFCvalue24" class = "hourFCValue tempNumber">10*c</div>
+
+            
+    </div>
+</div>
+    <div id = "week-forecast-box">
+    
+         
+             <div id = "weekFCDay1" class = "weekFCDay">Monday</div>
+             <div id = "weekFCIcon1" class = weekFCIcon>1</div>
+             <div id = "weekFCValue1" class = "weekFCValue tempNumber">cold</div>
+         
+            <div id = "weekFCDay2" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon2" class = weekFCIcon>2</div>
+            <div id = "weekFCValue2" class = "weekFCValue tempNumber">cold</div>
+        
+            <div id = "weekFCDay3" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon3" class = weekFCIcon>3</div>
+            <div id = "weekFCValue3" class = "weekFCValue tempNumber">cold</div>
+       
+            <div id = "weekFCDay4" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon4" class = weekFCIcon>4</div>
+            <div id = "weekFCValue4" class = "weekFCValue tempNumber">cold</div>
+        
+            <div id = "weekFCDay5" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon5" class = weekFCIcon>5</div>
+            <div id = "weekFCValue5" class = "weekFCValue tempNumber">cold</div>
+        
+            <div id = "weekFCDay6" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon6" class = weekFCIcon>6</div>
+            <div id = "weekFCValue6" class = "weekFCValue tempNumber">cold</div>
+
+
+            <div id = "weekFCDay7" class = "weekFCDay">Monday</div>
+            <div id = "weekFCIcon7" class = weekFCIcon>7</div>
+            <div id = "weekFCValue7" class = "weekFCValue tempNumber">cold</div>
+        
+     
+    </div>
+
+    
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
